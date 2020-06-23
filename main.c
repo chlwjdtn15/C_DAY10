@@ -17,7 +17,10 @@ int main(void) {
   // v1 아래 배열의 값중 짝수의 합만 출력.
   int arr[10] = {1,2,3,4,5,6,7,8,9,10};
   int sum = 0;
-  for (int i = 0; i < 10; i++) {
+  int size = sizeof(arr) / sizeof(arr[0]);
+
+  printf("%d\n", size);
+  for (int i = 0; i < size; i++) {
     
     if (arr[i] % 2 == 0) {
       
