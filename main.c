@@ -78,22 +78,51 @@ int main(void) {
 
 
 
-  //문제3. 숫자 다섯 개를 사용자에게 입력받아 입력받은 순서와 반대로 출력하는 프로그램을 만드시오.
-  int arr[5];
+    //문제3. 숫자 다섯 개를 사용자에게 입력받아 입력받은 순서와 반대로 출력하는 프로그램을 만드시오.
+  // int arr[5];
+  // int size = sizeof(arr) / sizeof(arr[0]);
+  // int b = 0;
+
+  // for( int i = 0; i < size; i++) {
+  //   scanf("%d", &b);
+    
+  //   arr[i] = b;
+  // }
+
+  // for ( int t = size - 1; t >= 0; t--) {
+  //   printf("%d\n", arr[t]);
+  // }
+
+
+  // 길이가 10인 배열을 선언하고 10개의 정수를 입력받는다. 입력받은 숫자가 홀수면 배열의 앞부터, 짝수면 뒤부터 채워나간다.
+
+
+  int arr[10]; 
   int size = sizeof(arr) / sizeof(arr[0]);
   int b = 0;
 
-  for( int i = 0; i < size; i++) {
+
+  for (int i = 0; i < size; i++) {
     scanf("%d", &b);
-    
-    arr[i] = b;
+
+
+    if(b % 2 != 0) {
+      
+      arr[i] = b;
+
+    }
+    if (b % 2 == 0) {
+      arr[size - i] = b;
+    }
+  
+  
+
   }
 
-  for ( int t = size - 1; t >= 0; t--) {
-    printf("%d\n", arr[t]);
-  }
-
-
+for (int q = 0; q < size; q++) {
+  printf("%d\n", arr[q]);
+}
+  
 
 
 
