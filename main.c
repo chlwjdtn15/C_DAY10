@@ -44,18 +44,37 @@ int main(void) {
 
 
 
-  int b = 0;
+  // int b = 0;
   
-  printf("my_scan() 사용 전 : %d\n", b);
+  // printf("my_scan() 사용 전 : %d\n", b);
 
 
-  // scanf("%d", &b);
+  // // scanf("%d", &b);
 
-  my_scan(123, &b);
+  // my_scan(123, &b);
   
-  printf("my_scan() 사용 후 : %d\n", b); // 출력 : 123
+  // printf("my_scan() 사용 후 : %d\n", b); // 출력 : 123
 
 
 
+  int arr[10];
+  int sum = 0;
+  int b;
+  for (int i = 0; i < 10; i ++) {
+    scanf("%d", &b);
+
+    arr[i] = b;
+
+    if(arr[i] % 2 == 0) {
+      
+
+      sum += arr[i];
+    }
+  }
+
+
+  printf("%d\n", sum);
+
+  
   return 0;
 }
