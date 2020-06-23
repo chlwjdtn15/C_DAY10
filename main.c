@@ -1,6 +1,16 @@
 // 배열에 10개의 양의 정수를 입력 받아서 저장하고, 저장된 정수 중 짝수 정수의 합을 출력하시오.
 #include <stdio.h>
 
+
+
+void my_scan(int a, int* b) {
+  
+
+  *b = a;
+}
+
+
+
 int main(void) {
 
 
@@ -37,10 +47,11 @@ int main(void) {
   int b = 0;
   
   printf("my_scan() 사용 전 : %d\n", b);
-  
 
-  scanf("%d", &b);
 
+  // scanf("%d", &b);
+
+  my_scan(123, &b);
   
   printf("my_scan() 사용 후 : %d\n", b); // 출력 : 123
 
