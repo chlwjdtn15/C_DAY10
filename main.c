@@ -3,11 +3,11 @@
 
 
 
-void my_scan(int a, int* b) {
+// void my_scan(int a, int* b) {
   
 
-  *b = a;
-}
+//   *b = a;
+// }
 
 
 
@@ -57,24 +57,47 @@ int main(void) {
 
 
   
-  int arr[10];
-  int size = sizeof(arr) / sizeof(arr[0]);
-  int sum = 0;
-  int b;
-  for (int i = 0; i < size; i ++) {
-    scanf("%d", &b);
+  // int arr[10];
+  // int size = sizeof(arr) / sizeof(arr[0]);
+  // int sum = 0;
+  // int b;
+  // for (int i = 0; i < size; i ++) {
+  //   scanf("%d", &b);
 
-    arr[i] = b;
+  //   arr[i] = b;
 
-    if(arr[i] % 2 == 0) {
+  //   if(arr[i] % 2 == 0) {
       
 
-      sum += arr[i];
-    }
+  //     sum += arr[i];
+  //   }
+  // }
+
+
+  // printf("%d\n", sum);
+
+
+
+  //문제3. 숫자 다섯 개를 사용자에게 입력받아 입력받은 순서와 반대로 출력하는 프로그램을 만드시오.
+  int arr[5];
+  int size = sizeof(arr) / sizeof(arr[0]);
+  int b = 0;
+
+  for( int i = 0; i < size; i++) {
+    scanf("%d", &b);
+    
+    arr[i] = b;
+  }
+
+  for ( int t = size - 1; t >= 0; t--) {
+    printf("%d\n", arr[t]);
   }
 
 
-  printf("%d\n", sum);
+
+
+
+
 
 
   return 0;
