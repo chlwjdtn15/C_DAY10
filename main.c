@@ -97,37 +97,50 @@ int main(void) {
   // 길이가 10인 배열을 선언하고 10개의 정수를 입력받는다. 입력받은 숫자가 홀수면 배열의 앞부터, 짝수면 뒤부터 채워나간다.
 
 
-  int arr[10]; 
-  int size = sizeof(arr) / sizeof(arr[0]);
-  int b = 0;
+  //int arr[10]; 
+  //int size = sizeof(arr) / sizeof(arr[0]);
+  //int b = 0;
 
 
-  for (int i = 0; i < size; i++) {
-    scanf("%d", &b);
+  //for (int i = 0; i < size; i++) {
+    //scanf("%d", &b);
 
 
-    if(b % 2 != 0) {
+    //if(b % 2 != 0) {
       
-      arr[i] = b;
+      //arr[i] = b;
 
-    }
-    if (b % 2 == 0) {
-      arr[size - i] = b;
-    }
+    //}
+    //if (b % 2 == 0) {
+      //arr[size - i] = b;
+    //}
   
   
 
+  //}
+
+//for (int q = 0; q < size; q++) {
+  //printf("%d\n", arr[q]);
+//}
+  
+  int arr[10];
+  int f = 0;
+  int b = 9;
+  
+  for(int i = 0; i < 10; i++){
+    int a;
+    scanf("%d", &a);
+    
+    if(a % 2 == 0) {
+      arr[b] = a;
+      b--;
+    } else {
+      arr[f] = a;
+      f++;
+    }
   }
-
-for (int q = 0; q < size; q++) {
-  printf("%d\n", arr[q]);
-}
-  
-
-
-
-
-
-
+  for (int i = 0; i < 10; i++) {
+    printf("%d ", arr[i]);
+  }
   return 0;
 }
